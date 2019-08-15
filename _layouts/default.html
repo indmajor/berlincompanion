@@ -9,7 +9,7 @@ crossorigin=""/>
 
 <body>
 
-  <div class="map" id="berlin-map" style="height: 200px"></div>
+  <div class="map" id="berlin-map" style="height: 500px"></div>
 
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
@@ -24,13 +24,15 @@ crossorigin=""/>
 
   var lat = 52.5200;
   var lng = 13.4050;
+  var zoom = 11;
 
   {% if page.lat and page.lng %}
     lat = {{ page.lat }};
     lng = {{ page.lng }};
+    zoom = 15;
   {% endif %}
 
-  var map = L.map('berlin-map').setView([lat, lng], 13);
+  var map = L.map('berlin-map').setView([lat, lng], zoom);
 
   L.tileLayer('https://a.tile.openstreetmap.org/{z}/{x}/{y}.png ', {
     maxZoom: 18,
@@ -39,7 +41,7 @@ crossorigin=""/>
 
   {% for post in site.posts %}
     var marker = L.marker([{{ post.lat}}, {{ post.lng }}]).addTo(map);
-    marker.bindPopup('<a href="{{ post.url }}">{{ post.title }}</a>');
+    marker.bindPopup('<a href="{{ post.url }}"><img src={{post.feature_image}}>{{ post.title }}</a>');
     {% if post.url == page.url %}
       marker.bindPopup('{{ post.title }}', {'closeButton': false}).openPopup();
     {% endif %}

@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  "Former East Berlin School"
+title:  "East Berlin School in Stalinist Neoclassical Style"
 date:   2019-08-14 16:20:46 +0200
 lat: 52.5074132
 lng: 13.463906
+feature_image: /assets/images/former_east_berlin_school/1.jpg
 ---
 
 **Max-Kreuziger-Haus**, Böcklinstraße 1-5, Berlin Friedrichshain
