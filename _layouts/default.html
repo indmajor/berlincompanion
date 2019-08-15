@@ -9,6 +9,7 @@ integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIpt
 crossorigin=""/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.67.0/dist/L.Control.Locate.min.css" />
 
+<link rel="stylesheet" href="{{ "assets/css/lightgallery/lightgallery.min.css" | relative_url }}">
 
 <body>
 
@@ -16,15 +17,15 @@ crossorigin=""/>
 
     <div class="wrapper">
 
-    <h2>Berlin Companion</h2>
+      <h2>Berlin Companion</h2>
 
-    <p>
-      <em>
-        {{ site.description }}
-      </em>
-    </p>
+      <p>
+        <em>
+          {{ site.description }}
+        </em>
+      </p>
 
-    <div class="map" id="berlin-map" style="height: {% if page.layout == "post" %}200{% else %}400{% endif %}px; margin-bottom: 40px;"></div>
+      <div class="map" id="berlin-map" style="height: {% if page.layout == "post" %}200{% else %}400{% endif %}px; margin-bottom: 40px;"></div>
 
       {{ content }}
     </div>
@@ -36,6 +37,9 @@ crossorigin=""/>
 
   <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.67.0/dist/L.Control.Locate.min.js" charset="utf-8"></script>
 
+  <script src="{{ "assets/js/lightgallery/lightgallery.min.js" | relative_url }}"></script>
+  <script src="{{ "assets/js/lightgallery/lg-thumbnail.min.js" | relative_url }}"></script>
+  <!-- <script src="{{ "assets/js/lightgallery/lg-fullscreen.min.js" | relative_url }}"></script> -->
 
   <script>
 
@@ -63,13 +67,13 @@ crossorigin=""/>
   {% for post in site.posts %}
   var marker = L.marker([{{ post.lat}}, {{ post.lng }}]).addTo(map);
   marker
-    .bindPopup(
-      '<a href="{{ post.url | relative_url }}"><img src={{ post.feature_image | relative_url }}>{{ post.title }}</a>',
-      {
-        maxWidth: 140,
-        maxHeight: 170
-      }
-    );
+  .bindPopup(
+    '<a href="{{ post.url | relative_url }}"><img src={{ post.feature_image | relative_url }}>{{ post.title }}</a>',
+    {
+      maxWidth: 140,
+      maxHeight: 170
+    }
+  );
   {% if post.url == page.url %}
   marker.bindPopup('{{ post.title }}', {'closeButton': false}).openPopup();
   {% endif %}
@@ -77,8 +81,14 @@ crossorigin=""/>
 
   </script>
 
-  {%- include footer.html -%}
+  <script type="text/javascript">
+    lightGallery(document.getElementById('lightgallery'), {
+      thumbnail: true,
+      showThumbByDefault: false
+    });
+  </script>
 
+  {%- include footer.html -%}
 
 </body>
 
