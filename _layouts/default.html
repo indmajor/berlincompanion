@@ -41,7 +41,7 @@ crossorigin=""/>
 
   {% for post in site.posts %}
     var marker = L.marker([{{ post.lat}}, {{ post.lng }}]).addTo(map);
-    marker.bindPopup('<a href="{{ post.url }}"><img src={{post.feature_image}}>{{ post.title }}</a>');
+    marker.bindPopup('<a href="{{ post.url | relative_url }}"><img src={{ post.feature_image | relative_url }}>{{ post.title }}</a>');
     {% if post.url == page.url %}
       marker.bindPopup('{{ post.title }}', {'closeButton': false}).openPopup();
     {% endif %}
