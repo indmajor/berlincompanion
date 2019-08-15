@@ -17,7 +17,7 @@ title: Berlin Companion
 email: indmajor64@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Discover Berlin with a map of culturally, architecturally, or historically
-  significant places of this city. Places you won't find in usual guides.
+  significant places of this city. Free and easy to use on your phone.
 baseurl: "/berlincompanion" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  indmajor

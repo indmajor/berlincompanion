@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "East Berlin School in Stalinist Neoclassical Style"
+title:  "Neoclassical East Berlin School"
 date:   2019-08-14 16:20:46 +0200
 lat: 52.5074132
 lng: 13.463906
