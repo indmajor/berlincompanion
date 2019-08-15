@@ -25,8 +25,11 @@ crossorigin=""/>
         </em>
       </p>
 
-      <div class="map" id="berlin-map" style="height: {% if page.layout == "post" %}200{% else %}400{% endif %}px; margin-bottom: 40px;"></div>
+      <nav style="padding-bottom: 10px">
+        <a href="{{ site.url }}">Home</a>
+      </nav>
 
+      <div class="map" id="berlin-map" style="height: {% if page.layout == "post" %}200{% else %}400{% endif %}px; margin-bottom: 40px;"></div>
       {{ content }}
     </div>
   </main>
