@@ -71,7 +71,7 @@ crossorigin=""/>
   var marker = L.marker([{{ post.lat}}, {{ post.lng }}]).addTo(map);
   marker
   .bindPopup(
-    '<a href="{{ post.url | relative_url }}"><img src={{ post.feature_image | relative_url }}>{{ post.title }}</a>',
+    '<a href="{{ post.url | relative_url }}"><img src={{ post.images[0] | append: ".thumbnail.jpg" | relative_url }}>{{ post.title }}</a>',
     {
       maxWidth: 140,
       maxHeight: 170
