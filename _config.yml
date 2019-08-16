@@ -41,3 +41,9 @@ excerpt_separator: <!--more-->
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+jekyll_compose:
+  post_default_front_matter:
+      lat:
+      lng:
+      feature_image: /assets/images/directory/1.jpg
+      images: []
