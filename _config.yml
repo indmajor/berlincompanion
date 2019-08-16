@@ -47,3 +47,5 @@ jekyll_compose:
       lng:
       feature_image: /assets/images/directory/1.jpg
       images: []
+
+google_analytics: UA-145839634-1
