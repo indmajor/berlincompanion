@@ -2,8 +2,8 @@
 layout: post
 title:  "Chapel of Reconciliation"
 date:   2019-08-15 10:04:00 +0200
-lat: 52.5358142
-lng: 13.3896878
+lat: 52.535795
+lng: 13.391940
 tags: [church, history]
 feature_image: /assets/images/chapel_of_reconciliation/1.jpg
 images: [
