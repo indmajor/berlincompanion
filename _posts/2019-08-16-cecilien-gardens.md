@@ -2,8 +2,8 @@
 layout: post
 title: Cecilien Gardens
 date: 2019-08-16 13:47 +0200
-lat: 52.4741182
-lng: 13.3398664
+lat: 52.474213
+lng: 13.341916
 feature_image: /assets/images/cecilien_gardens/1.jpg
 images: [
   /assets/images/cecilien_gardens/1.jpg,

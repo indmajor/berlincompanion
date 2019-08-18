@@ -2,8 +2,8 @@
 layout: post
 title: Horridoh Villa
 date: 2019-08-16 16:47 +0200
-lat: 52.5753832
-lng: 13.3961861
+lat: 52.575407
+lng: 13.398376
 feature_image: "/assets/images/horridoh/1.jpg"
 images: [
   /assets/images/horridoh/1.jpg,

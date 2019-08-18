@@ -2,8 +2,8 @@
 layout: post
 title: Former Artisan’s Association
 date: 2019-08-16 14:15 +0200
-lat: 52.5259452
-lng: 13.3993734
+lat: 52.525704
+lng: 13.401352
 feature_image: "/assets/images/former_artisans_association/1.jpg"
 images: [
   /assets/images/former_artisans_association/1.jpg,

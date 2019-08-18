@@ -2,8 +2,8 @@
 layout: post
 title: Chamber Music Hall
 date: 2019-08-17 20:09 +0200
-lat: 52.509555
-lng: 13.370086
+lat: 52.509493
+lng: 13.369077
 feature_image: "/assets/images/chamber_music_hall/1.jpg"
 images: [
   /assets/images/chamber_music_hall/1.jpg

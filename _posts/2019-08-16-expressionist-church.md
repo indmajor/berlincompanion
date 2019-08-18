@@ -2,8 +2,8 @@
 layout: post
 title: Expressionist Church
 date: 2019-08-16 16:50 +0200
-lat: 52.584791
-lng: 13.3928404
+lat: 52.584710
+lng: 13.394743
 feature_image: "/assets/images/kirche_platanenstrasse/1.jpg"
 images: [
   /assets/images/kirche_platanenstrasse/1.jpg,

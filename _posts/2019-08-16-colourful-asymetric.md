@@ -2,8 +2,8 @@
 layout: post
 title: Colourful & Asymetric
 date: 2019-08-16 14:01 +0200
-lat: 52.5020732
-lng: 13.473656
+lat: 52.502025
+lng: 13.475741
 feature_image: "/assets/images/colourful_asymetric/1.jpg"
 images: [
   assets/images/colourful_asymetric/1.jpg,

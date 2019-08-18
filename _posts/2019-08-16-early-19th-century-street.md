@@ -2,7 +2,7 @@
 layout: post
 title: Early 19th Century Street
 date: 2019-08-16 17:02 +0200
-lat: 52.5222818
+lat: 52.521998
 lng: 13.3822327
 feature_image: "/assets/images/marienstrasse/1.jpg"
 images: [

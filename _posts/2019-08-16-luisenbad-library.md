@@ -2,8 +2,8 @@
 layout: post
 title: Luisenbad Library
 date: 2019-08-16 14:20 +0200
-lat: 52.5536324
-lng: 13.3770936
+lat: 52.553675
+lng: 13.379314
 feature_image: "/assets/images/luisenbad_bibliothek/1.jpg"
 images: [
   /assets/images/luisenbad_bibliothek/1.jpg,

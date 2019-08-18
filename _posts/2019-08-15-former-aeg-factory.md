@@ -2,8 +2,8 @@
 layout: post
 title: Former AEG factory
 date: 2019-08-15 10:10 +0200
-lat: 52.5412194
-lng: 13.3809019
+lat: 52.541240
+lng: 13.385602
 tags: [factory, architecture]
 feature_image: /assets/images/former_aeg_factory/1.jpg
 images: [

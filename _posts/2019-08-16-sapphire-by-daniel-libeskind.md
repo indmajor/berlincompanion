@@ -2,8 +2,8 @@
 layout: post
 title: Sapphire by Daniel Libeskind
 date: 2019-08-16 16:43 +0200
-lat: 52.5342517
-lng: 13.3768786
+lat: 52.534286
+lng: 13.378980
 feature_image: "/assets/images/sapphire/1.jpg"
 images: [
   /assets/images/sapphire/1.jpg,

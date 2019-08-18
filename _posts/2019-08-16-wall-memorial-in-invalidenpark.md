@@ -2,8 +2,8 @@
 layout: post
 title: Wall Memorial in Invalidenpark
 date: 2019-08-16 14:06 +0200
-lat: 52.5296651
-lng: 13.3737537
+lat: 52.529268
+lng: 13.376465
 feature_image: /assets/images/invalidenpark/1.jpg
 images: [
   /assets/images/invalidenpark/1.jpg,

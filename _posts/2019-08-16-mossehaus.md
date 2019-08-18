@@ -2,8 +2,8 @@
 layout: post
 title: Mossehaus
 date: 2019-08-16 13:54 +0200
-lat: 52.5087238
-lng: 13.3944737
+lat: 52.508790
+lng: 13.396687
 feature_image: /assets/images/mossehaus/1.jpg
 images: [
   /assets/images/mossehaus/1.jpg,

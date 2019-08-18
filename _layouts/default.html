@@ -59,7 +59,7 @@ crossorigin=""/>
   {% if page.lat and page.lng %}
   lat = {{ page.lat }};
   lng = {{ page.lng }};
-  zoom = 15;
+  zoom = 17;
   {% endif %}
 
   var map = L.map('berlin-map').setView([lat, lng], zoom);

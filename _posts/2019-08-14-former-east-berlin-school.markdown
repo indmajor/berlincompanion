@@ -2,8 +2,8 @@
 layout: post
 title:  "Neoclassical East Berlin School"
 date:   2019-08-14 16:20:46 +0200
-lat: 52.5074132
-lng: 13.463906
+lat: 52.506923
+lng: 13.465815
 tags: [east, architecture]
 feature_image: /assets/images/former_east_berlin_school/1.jpg
 images: [
