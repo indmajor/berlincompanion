@@ -9,9 +9,7 @@ images: [
   /assets/images/luisenbad_bibliothek/1.jpg,
   /assets/images/luisenbad_bibliothek/2.jpg,
   /assets/images/luisenbad_bibliothek/3.jpg,
-  /assets/images/luisenbad_bibliothek/4.jpg,
-  /assets/images/luisenbad_bibliothek/5.jpg,
-  /assets/images/luisenbad_bibliothek/6.jpg
+  /assets/images/luisenbad_bibliothek/4.jpg
 ]
 ---
 
