@@ -8,8 +8,7 @@ tags: [east, architecture]
 feature_image: /assets/images/former_east_berlin_school/1.jpg
 images: [
   /assets/images/former_east_berlin_school/1.jpg,
-  /assets/images/former_east_berlin_school/2.jpg,
-  /assets/images/former_east_berlin_school/3.jpg
+  /assets/images/former_east_berlin_school/2.jpg
 ]
 ---
 
