@@ -18,7 +18,7 @@ layout: default
   <div id="lightgallery" style="margin-bottom: 30px;">
     {% for image in page.images %}
       <a href="{{ image | relative_url }}" data-responsive="{{ image | relative_url}}.small.jpg 500, {{ image | relative_url }} 800">
-        <img src="{{ image | relative_url }}.thumbnail.jpg" alt="{{ page.title }}" style="padding: 2px 0"/>
+        <img src="{{ image | relative_url }}.thumbnail.jpg" alt="{{ page.title }}" style="padding: 2px 0; height: 100px;"/>
       </a>
     {% endfor %}
   </div>
