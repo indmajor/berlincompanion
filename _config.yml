@@ -18,7 +18,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Discover Berlin with a map of culturally, architecturally, or historically
   significant places of this city. Free and easy to use on your phone.
 baseurl: "/berlincompanion" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://indmajor.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  indmajor
 instagram_username: indmajor_berlin
 
@@ -27,6 +27,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 show_excerpts: true
 
