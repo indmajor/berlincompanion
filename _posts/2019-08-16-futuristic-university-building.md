@@ -6,8 +6,7 @@ lat: 52.454471
 lng: 13.288704
 feature_image: "/assets/images/weiterbildungszentrum_fu/1.jpg"
 images: [
-  /assets/images/weiterbildungszentrum_fu/1.jpg,
-  /assets/images/weiterbildungszentrum_fu/2.jpg
+  /assets/images/weiterbildungszentrum_fu/1.jpg
 ]
 ---
 

@@ -7,8 +7,7 @@ lng: 13.396687
 feature_image: /assets/images/mossehaus/1.jpg
 images: [
   /assets/images/mossehaus/1.jpg,
-  /assets/images/mossehaus/2.jpg,
-  /assets/images/mossehaus/3.jpg
+  /assets/images/mossehaus/2.jpg
 ]
 
 ---

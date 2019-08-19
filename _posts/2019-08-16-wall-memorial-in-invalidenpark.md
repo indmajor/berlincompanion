@@ -7,8 +7,7 @@ lng: 13.376465
 feature_image: /assets/images/invalidenpark/1.jpg
 images: [
   /assets/images/invalidenpark/1.jpg,
-  /assets/images/invalidenpark/2.jpg,
-  /assets/images/invalidenpark/3.jpg
+  /assets/images/invalidenpark/2.jpg
 ]
 ---
 

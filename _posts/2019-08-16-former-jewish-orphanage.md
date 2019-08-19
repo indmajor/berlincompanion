@@ -2,13 +2,11 @@
 layout: post
 title: Former Jewish Orphanage
 date: 2019-08-16 16:58 +0200
-lat: 52.454392
-lng: 13.288701
+lat: 52.568756
+lng: 13.412331
 feature_image: "/assets/images/former_jewish_orphanage/1.jpg"
 images: [
-  /assets/images/former_jewish_orphanage/1.jpg,
-  /assets/images/former_jewish_orphanage/2.jpg,
-  /assets/images/former_jewish_orphanage/3.jpg
+  /assets/images/former_jewish_orphanage/1.jpg
 ]
 ---
 

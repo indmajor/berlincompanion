@@ -8,8 +8,7 @@ feature_image: "/assets/images/paul_francke/1.jpg"
 images: [
   /assets/images/paul_francke/1.jpg,
   /assets/images/paul_francke/2.jpg,
-  /assets/images/paul_francke/3.jpg,
-  /assets/images/paul_francke/4.jpg
+  /assets/images/paul_francke/3.jpg
 ]
 ---
 

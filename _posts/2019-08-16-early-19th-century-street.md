@@ -9,8 +9,7 @@ images: [
   /assets/images/marienstrasse/1.jpg,
   /assets/images/marienstrasse/2.jpg,
   /assets/images/marienstrasse/3.jpg,
-  /assets/images/marienstrasse/4.jpg,
-  /assets/images/marienstrasse/5.jpg
+  /assets/images/marienstrasse/4.jpg
 ]
 ---
 

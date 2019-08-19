@@ -9,8 +9,7 @@ images: [
   /assets/images/paddenpuhl/1.jpg,
   /assets/images/paddenpuhl/2.jpg,
   /assets/images/paddenpuhl/3.jpg,
-  /assets/images/paddenpuhl/4.jpg,
-  /assets/images/paddenpuhl/5.jpg
+  /assets/images/paddenpuhl/4.jpg
 ]
 ---
 

@@ -8,8 +8,7 @@ feature_image: "/assets/images/mirrored_wall/1.jpg"
 images: [
   /assets/images/mirrored_wall/1.jpg,
   /assets/images/mirrored_wall/2.jpg,
-  /assets/images/mirrored_wall/3.jpg,
-  /assets/images/mirrored_wall/4.jpg
+  /assets/images/mirrored_wall/3.jpg
 ]
 ---
 
