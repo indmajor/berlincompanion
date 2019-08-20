@@ -95,14 +95,14 @@ crossorigin=""/>
   var marker = L.marker([{{ post.lat}}, {{ post.lng }}]).addTo(map);
   marker
   .bindPopup(
-    '<a href="{{ post.url | relative_url }}"><img src={{ post.images[0] | append: ".thumbnail.jpg" | relative_url }}>{{ post.title }}</a>',
+    '<a href="{{ post.url | relative_url }}"><img src={{ post.images[0] | append: ".thumbnail.jpg" | relative_url }}>{{ post.title | escape }}</a>',
     {
       maxWidth: 140,
       maxHeight: 170
     }
   );
   {% if post.url == page.url %}
-  marker.bindPopup('{{ post.title }}', {'closeButton': false}).openPopup();
+  marker.bindPopup('{{ post.title | escape }}', {'closeButton': false}).openPopup();
   {% endif %}
   {% endfor %}
 
