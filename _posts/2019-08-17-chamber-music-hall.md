@@ -4,6 +4,7 @@ title: Chamber Music Hall
 date: 2019-08-17 20:09 +0200
 lat: 52.509493
 lng: 13.369077
+tags: [architecture, music]
 feature_image: "/assets/images/chamber_music_hall/1.jpg"
 images: [
   /assets/images/chamber_music_hall/1.jpg

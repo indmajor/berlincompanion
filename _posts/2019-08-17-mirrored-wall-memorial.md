@@ -4,6 +4,7 @@ title: Mirrored Wall Memorial
 date: 2019-08-17 19:49 +0200
 lat: 52.456836
 lng: 13.321978
+tags: [history, jewish history]
 feature_image: "/assets/images/mirrored_wall/1.jpg"
 images: [
   /assets/images/mirrored_wall/1.jpg,

@@ -4,6 +4,7 @@ title: Nordsternhaus
 date: 2019-08-17 19:55 +0200
 lat: 52.485884
 lng: 13.343291
+tags: [architecture]
 feature_image: "/assets/images/nordsternhaus/1.jpg"
 images: [
   /assets/images/nordsternhaus/1.jpg

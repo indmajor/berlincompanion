@@ -4,6 +4,7 @@ title: Unité d'Habitation of Berlin
 date: 2019-08-20 18:37 +0200
 lat: 52.510217
 lng: 13.243880
+tags: [le corbusier, architecture]
 feature_image: "/assets/images/le_corbusier/1.jpg"
 images: [
   /assets/images/le_corbusier/1.jpg

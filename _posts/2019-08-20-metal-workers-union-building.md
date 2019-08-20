@@ -4,6 +4,7 @@ title: Metal Workers' Union Building
 date: 2019-08-20 17:13 +0200
 lat: 52.499364
 lng: 13.395866
+tags: [architecture]
 feature_image: "/assets/images/metal_workers_building/1.jpg"
 images: [
   /assets/images/metal_workers_building/1.jpg

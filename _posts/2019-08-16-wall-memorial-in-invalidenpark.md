@@ -4,6 +4,7 @@ title: Wall Memorial in Invalidenpark
 date: 2019-08-16 14:06 +0200
 lat: 52.529268
 lng: 13.376465
+tags: [the wall, history]
 feature_image: /assets/images/invalidenpark/1.jpg
 images: [
   /assets/images/invalidenpark/1.jpg,

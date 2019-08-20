@@ -4,6 +4,7 @@ title: Case Study House
 date: 2019-08-17 19:41 +0200
 lat: 52.534678
 lng: 13.408801
+tags: [architecture]
 feature_image: "/assets/images/case_study_house/1.jpg"
 images: [
   /assets/images/case_study_house/1.jpg

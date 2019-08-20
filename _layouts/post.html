@@ -6,46 +6,47 @@ layout: default
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author | escape }}</span></span>
-      {%- endif -%}</p>
-  </header>
 
-  <div id="lightgallery" style="margin-bottom: 30px;">
-    {% for image in page.images %}
+      <span>
+        {% for tag in page.tags %}
+        {% capture tag_name %}{{ tag }}{% endcapture %}
+        <a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
+        {% endfor %}
+      </span>
+
+    </header>
+
+    <div id="lightgallery" style="margin-bottom: 30px;">
+      {% for image in page.images %}
       <a href="{{ image | relative_url }}" data-responsive="{{ image | relative_url}}.small.jpg 500, {{ image | relative_url }} 800">
         <img src="{{ image | relative_url }}.thumbnail.jpg" alt="{{ page.title }}" style="padding: 2px 0; height: 100px;"/>
       </a>
-    {% endfor %}
-  </div>
-
-  <div class="post-content e-content" itemprop="articleBody">
-    <div class="google-maps-link">
-      <a href="https://www.google.com/maps/search/?api=1&query={{ page.lat }},{{ page.lng }}" target="_blank">
-        See on Google Maps
-      </a>
+      {% endfor %}
     </div>
-    {{ content }}
-  </div>
 
-  <div class="page-naviation">
-    {% if page.previous.url %}
+    <div class="post-content e-content" itemprop="articleBody">
+      <div class="google-maps-link">
+        <a href="https://www.google.com/maps/search/?api=1&query={{ page.lat }},{{ page.lng }}" target="_blank">
+          See on Google Maps
+        </a>
+      </div>
+      {{ content }}
+    </div>
+
+    <div class="page-naviation">
+      {% if page.previous.url %}
       <a class="prev" href="{{page.previous.url | relative_url }}">&laquo; {{page.previous.title }}</a>
-    {% else %}
+      {% else %}
       <a class="prev"></a>
-    {% endif %}
-    {% if page.next.url %}
+      {% endif %}
+      {% if page.next.url %}
       <a class="next" href="{{page.next.url| relative_url }}">{{page.next.title}} &raquo;</a>
-    {% endif %}
-  </div>
+      {% endif %}
+    </div>
 
-  {%- if site.disqus.shortname -%}
+    {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
-  {%- endif -%}
+    {%- endif -%}
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
+    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+  </article>

@@ -5,6 +5,7 @@ date: 2019-08-16 13:40 +0200
 lat: 52.518686
 lng: 13.389516
 feature_image: /assets/images/hotel_splendid/1.jpg
+tags: [architecture]
 images: [
   /assets/images/hotel_splendid/1.jpg
 ]

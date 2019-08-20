@@ -4,6 +4,7 @@ title: Art Nouveau Railway Station Entrance
 date: 2019-08-17 19:45 +0200
 lat: 52.437406
 lng: 13.232334
+tags: [architecture]
 feature_image: "/assets/images/mexikoplatz/1.jpg"
 images: [
   /assets/images/mexikoplatz/1.jpg,

@@ -5,6 +5,8 @@ date: 2019-08-16 17:02 +0200
 lat: 52.521998
 lng: 13.3822327
 feature_image: "/assets/images/marienstrasse/1.jpg"
+tags: [architecture, history]
+
 images: [
   /assets/images/marienstrasse/1.jpg,
   /assets/images/marienstrasse/2.jpg,

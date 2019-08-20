@@ -4,6 +4,7 @@ title: Ida-Simon-Palais
 date: 2019-08-17 19:58 +0200
 lat: 52.522726
 lng: 13.393482
+tags: [architecture, women history]
 feature_image: "/assets/images/ida_simon_palais/1.jpg"
 images: [
   /assets/images/ida_simon_palais/1.jpg

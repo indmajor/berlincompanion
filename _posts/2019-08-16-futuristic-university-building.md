@@ -4,6 +4,7 @@ title: Futuristic University Building
 date: 2019-08-16 17:17 +0200
 lat: 52.454471
 lng: 13.288704
+tags: [university, architecture]
 feature_image: "/assets/images/weiterbildungszentrum_fu/1.jpg"
 images: [
   /assets/images/weiterbildungszentrum_fu/1.jpg

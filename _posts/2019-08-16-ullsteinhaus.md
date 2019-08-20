@@ -4,6 +4,7 @@ title: Ullsteinhaus
 date: 2019-08-16 14:10 +0200
 lat: 52.453694
 lng: 13.385356
+tags: [architecture]
 feature_image: "/assets/images/ullsteinhaus/1.jpg"
 images: [
   /assets/images/ullsteinhaus/1.jpg,

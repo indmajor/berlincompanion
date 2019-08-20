@@ -4,6 +4,7 @@ title: Berlin Wall Watchtower
 date: 2019-08-17 20:05 +0200
 lat: 52.533908
 lng: 13.369275
+tags: [the wall, history]
 feature_image: "/assets/images/watchtower/1.jpg"
 images: [
   /assets/images/watchtower/1.jpg,

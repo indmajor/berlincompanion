@@ -5,6 +5,8 @@ date: 2019-08-16 14:15 +0200
 lat: 52.525704
 lng: 13.401352
 feature_image: "/assets/images/former_artisans_association/1.jpg"
+tags: [history, rosa luxembourg]
+
 images: [
   /assets/images/former_artisans_association/1.jpg,
   /assets/images/former_artisans_association/2.jpg,

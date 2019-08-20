@@ -4,6 +4,7 @@ title: Former Jewish Orphanage
 date: 2019-08-16 16:58 +0200
 lat: 52.568756
 lng: 13.412331
+tags: [jewish history, history]
 feature_image: "/assets/images/former_jewish_orphanage/1.jpg"
 images: [
   /assets/images/former_jewish_orphanage/1.jpg

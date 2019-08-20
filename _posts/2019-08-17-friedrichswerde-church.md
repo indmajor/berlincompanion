@@ -4,6 +4,7 @@ title: Friedrichswerde Church
 date: 2019-08-17 20:12 +0200
 lat: 52.516017
 lng: 13.397477
+tags: [architecture, church, schinkel]
 feature_image: "/assets/images/friedrichswerde_church/1.jpg"
 images: [
   /assets/images/friedrichswerde_church/1.jpg,
