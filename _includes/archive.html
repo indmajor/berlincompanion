@@ -10,7 +10,7 @@
   {% capture tagname %}{{ tagitems[1] }}{% endcapture %}
   {% capture tagcount %}{{ tagitems[2] }}{% endcapture %}
   {% if tagname.size > 0 %}
-  <a href="/tag/{{ tagname }}"><code class="highligher-rouge"><nobr>{{ tagname }} [{{ tagcount }}]</nobr></code></a>
+  <a href="{{ "tag/" | append: tagname | relative_url }}"><code class="highligher-rouge"><nobr>{{ tagname }} [{{ tagcount }}]</nobr></code></a>
   {% endif %}
 {% endfor %}
 </div>
