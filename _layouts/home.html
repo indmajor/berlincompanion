@@ -1,38 +1,28 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-<div class="home">
-  <h1 class="page-heading">{{ page.title }}</h1>
+{%- include head.html -%}
 
-  {{ content }}
+<body class="d-flex flex-column h-100">
 
-  {%- if site.posts.size > 0 -%}
-  <ul class="post-list">
-    {%- for post in site.posts -%}
-    <li>
-      <h3>
-        <a class="post-link" href="{{ post.url | relative_url }}">
-          {{ post.title | escape }}
-        </a>
-      </h3>
+    <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">{{ site.title }}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{{ site.url }}">Home <span class="sr-only">{% if page.url == site.url %}(current){% endif %}</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-      <p class="post-meta">
-        <span>
-          {% for tag in post.tags %}
-          {% capture tag_name %}{{ tag }}{% endcapture %}
-          <a href="{{ "tag/" | append: tag_name | relative_url }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
-          {% endfor %}
-        </span>
-      </p>
-      {%- if site.show_excerpts -%}
-      {{ post.excerpt }}
-      {%- endif -%}
-    </li>
-    {%- endfor -%}
-  </ul>
+  <div class="map" id="berlin-map"></div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
+  {%- include scripts.html -%}
 
-</div>
+</body>
+</html>

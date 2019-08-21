@@ -1,0 +1,51 @@
+.google-maps-link {
+  margin-bottom: 10px;
+}
+
+.page-naviation {
+  font-size: 14px;
+  display: block;
+  width: auto;
+  overflow: hidden;
+}
+
+.page-naviation a {
+  display: block;
+  width: 50%;
+  float: left;
+  margin: 1em 0;
+}
+
+.page-naviation .next {
+  text-align: right;
+}
+
+.leaflet-popup-content img {
+  vertical-align: middle;
+  max-height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+main > .container {
+  padding: 60px 15px 0;
+}
+
+code {
+  font-size: 80%;
+}
+
+body {
+  padding-top: 56px;
+}
+
+html, body, main, #container, #berlin-map {
+  height: 100%;
+  width: auto;
+  overflow: hidden;
+}
+
+#berlin-map {
+  position: relative;
+}
