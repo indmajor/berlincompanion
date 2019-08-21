@@ -3,9 +3,8 @@
 
 {%- include head.html -%}
 
-<body class="d-flex flex-column h-100">
+<body>
 
-    <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <a class="navbar-brand" href="#">{{ site.title }}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,6 +20,46 @@
   </nav>
 
   <div class="map" id="berlin-map"></div>
+
+  <!-- modals -->
+  {% for post in site.posts %}
+  <div class="modal micromodal-slide" id="{{ post.id | replace: '/', '' }}" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="{{ post.id | replace: '/', '' }}-title">
+        <header class="modal__header">
+          <h2 class="modal__title" id="{{ post.id | replace: '/', '' }}-title">
+            {{ post.title }}
+          </h2>
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+        </header>
+        <main class="modal__content" id="{{ post.id | replace: '/', '' }}-content">
+
+          <div id="{{ post.id | replace: '/', '' }}-lightgallery" style="margin-bottom: 30px;">
+            {% for image in post.images %}
+            <a href="{{ image | relative_url }}" data-responsive="{{ image | relative_url}}.small.jpg 500, {{ image | relative_url }} 800">
+              <img src="{{ image | relative_url }}.thumbnail.jpg" alt="{{ post.title }}" style="padding: 2px 0; height: 100px;"/>
+            </a>
+            {% endfor %}
+          </div>
+
+          <div class="post-content e-content" itemprop="articleBody">
+            <div class="google-maps-link">
+              <a href="https://www.google.com/maps/search/?api=1&query={{ post.lat }},{{ post.lng }}" target="_blank">
+                See on Google Maps
+              </a>
+            </div>
+            {{ content }}
+          </div>
+
+          {{ post.content }}
+        </main>
+        <footer class="modal__footer">
+          <!-- <button class="modal__btn modal__btn-primary">Open</button> -->
+          <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+        </footer>
+      </div>
+    </div>
+  </div>  {% endfor %}
 
   {%- include scripts.html -%}
 

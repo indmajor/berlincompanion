@@ -6,7 +6,10 @@ crossorigin=""></script>
 
 <script src="{{ "assets/js/lightgallery/lightgallery.min.js" | relative_url }}"></script>
 <script src="{{ "assets/js/lightgallery/lg-thumbnail.min.js" | relative_url }}"></script>
-<!-- <script src="{{ "assets/js/lightgallery/lg-fullscreen.min.js" | relative_url }}"></script> -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 
 <script>
 
@@ -56,16 +59,10 @@ map.on('popupopen', function(e) {
   {% for post in site.posts %}
     var marker = L.marker([{{ post.lat}}, {{ post.lng }}]).addTo(map);
     marker
-    .bindPopup(
-      '<a href="{{ post.url | relative_url }}"><img src={{ post.images[0] | append: ".thumbnail.jpg" | relative_url }}>{{ post.title | escape }}</a>',
-      {
-        maxWidth: 140,
-        maxHeight: 170
-      }
-    );
-    {% if post.url == page.url %}
-    marker.bindPopup('{{ post.title | escape }}', {'closeButton': false}).openPopup();
-    {% endif %}
+    .on('click', function(e) {
+      console.log("{{ post.id | replace: '/', '' }}")
+      MicroModal.show("{{ post.id | replace: '/', '' }}");
+    });;
 
   {% endfor %}
 {% endif %}
@@ -74,12 +71,14 @@ map.on('popupopen', function(e) {
 </script>
 
 <script type="text/javascript">
-lightGallery(document.getElementById('lightgallery'), {
-  thumbnail: true,
-  showThumbByDefault: false
-});
+  {% for post in site.posts %}
+    lightGallery(document.getElementById("{{ post.id | replace: '/', '' }}-lightgallery"), {
+      thumbnail: true,
+      showThumbByDefault: false
+    });
+  {% endfor %}
 </script>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  MicroModal.init();
+</script>
