@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      {% for post in site.posts %}
+        <div class="col-md-3">
+          <div class="card mb-3 shadow-sm">
+            <img height="225" class="bd-placeholder-img card-img-top place-card-img" src="{{ post.feature_image | relative_url | append: '.small.jpg' }}" alt="{{ post.title }}">
+            <div class="card-body d-flex flex-column">
+              <p class="card-text truncate"><b>{{post.title}}: </b>{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>
+              <div class="bd-highlight flex-grow-1 align-items-end d-flex">
+                <a href="{{ post.url | relative_url}}">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">{{ site.title }}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      {% assign current = page.url | downcase | split: '/' %}
+      <li class="nav-item {% if current.size == 0 %}active{% endif %}">
+        <a class="nav-link" href="{{ site.url }}">Map <span class="sr-only">{% if current[1] == 'map' %}(current){% endif %}</span></a>
+      </li>
+
+      <li class="nav-item {% if current[1] == 'places.html' %}active{% endif %}">
+        <a class="nav-link" href="{{ site.url }}/places">Places <span class="sr-only">{% if current[1] == 'places' %}(current){% endif %}</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>

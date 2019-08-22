@@ -5,33 +5,29 @@
 
 <body>
 
-  <main class="page-content" aria-label="Content">
+  {%- include nav.html -%}
 
-    <div class="wrapper">
-
-      <h2>Berlin Companion</h2>
-
-      <p>
-        <em>
-          {{ site.description }}
-        </em>
-      </p>
-
-      <nav style="padding-bottom: 10px">
-        <a href="{{ site.baseurl }}">Home</a>
-      </nav>
-
-
-      {% include archive.html %}
-
-      {{ content }}
-    </div>
+  <main role="main">
+    {{ content }}
   </main>
 
-  {%- include footer.html -%}
+  <footer class="text-muted default">
+    <div class="container">
+      <p class="float-right">
+        <a href="#">Back to top</a>
+      </p>
+      <p>{{ site.description }}</p>
+    </div>
+  </footer>
 
   {%- include scripts.html -%}
 
+  <script src="{{ 'assets/js/clamp.js' | relative_url }}"></script>
+  <script>
+    $(".truncate").each(function() {
+      $clamp(this, {clamp: '150px'});
+    })
+  </script>
 </body>
 
 </html>

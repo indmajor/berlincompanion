@@ -12,6 +12,4 @@ images: [
 ]
 ---
 
-**Max-Kreuziger-Haus**, Böcklinstraße 1-5, Berlin Friedrichshain
-
 This East Berlin school in the Stalinist neoclassical style was converted into an apartment building in the 2000s.
