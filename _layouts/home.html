@@ -24,27 +24,27 @@
         </header>
         <main class="modal__content" id="{{ post.id | replace: '/', '' }}-content">
 
-          <div id="{{ post.id | replace: '/', '' }}-lightgallery" style="margin-bottom: 30px;">
+          <div id="{{ post.id | replace: '/', '' }}-lightgallery" class="lightgallery">
             {% for image in post.images %}
             <a href="{{ image | relative_url }}" data-responsive="{{ image | relative_url}}.small.jpg 500, {{ image | relative_url }} 800">
-              <img src="{{ image | relative_url }}.thumbnail.jpg" alt="{{ post.title }}" style="padding: 2px 0; height: 100px;"/>
+              <img src="{{ image | relative_url }}.small.jpg" alt="{{ post.title }}"/>
             </a>
             {% endfor %}
           </div>
 
-          <div class="post-content e-content" itemprop="articleBody">
-            <div class="google-maps-link">
-              <a href="https://www.google.com/maps/search/?api=1&query={{ post.lat }},{{ post.lng }}" target="_blank">
-                See on Google Maps
-              </a>
-            </div>
-            {{ content }}
+          <div class="google-maps-link">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query={{ post.lat }},{{ post.lng }}"
+              target="_blank"
+              class="btn btn-primary btn-sm google-map-btn"
+            >
+              See on Google Maps
+            </a>
           </div>
 
           {{ post.content }}
         </main>
         <footer class="modal__footer">
-          <!-- <button class="modal__btn modal__btn-primary">Open</button> -->
           <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
         </footer>
       </div>

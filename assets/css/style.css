@@ -21,3 +21,23 @@ footer.default p {
     min-height: 490px;
   }
 }
+
+#place-map {
+  width: 100%;
+  height: 200px;
+}
+
+.google-map-btn:visited {
+    color: white;
+}
+
+.lightgallery {
+  margin-bottom: 10px;
+}
+
+.lightgallery img {
+  padding: 2px 0;
+  height: 200px;
+  object-fit: cover;
+  width: 200px;
+}

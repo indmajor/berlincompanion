@@ -1,52 +1,92 @@
----
-layout: default
----
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
+{%- include head.html -%}
 
-      <span>
-        {% for tag in page.tags %}
-        {% capture tag_name %}{{ tag }}{% endcapture %}
-        <a href="{{ "tag/" | append: tag_name | relative_url }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
-        {% endfor %}
-      </span>
+<body>
 
-    </header>
+{%- include nav.html -%}
 
-    <div id="{{ post.id | replace: '/', '' }}-lightgallery" style="margin-bottom: 30px;">
-      {% for image in page.images %}
-      <a href="{{ image | relative_url }}" data-responsive="{{ image | relative_url}}.small.jpg 500, {{ image | relative_url }} 800">
-        <img src="{{ image | relative_url }}.thumbnail.jpg" alt="{{ page.title }}" style="padding: 2px 0; height: 100px;"/>
-      </a>
-      {% endfor %}
+<main role="main">
+    <div class="container">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+            <div class="col-lg-8 col-md-10 mx-auto my-4">
+                <article>
+                    <header>
+                        <h1>{{ page.title | escape }}</h1>
+                    </header>
+
+                    <div id="lightgallery" class="lightgallery">
+                        {% for image in page.images %}
+                        <a href="{{ image | relative_url }}"
+                           data-responsive="{{ image | relative_url}}.small.jpg 500, {{ image | relative_url }} 800">
+                            <img src="{{ image | relative_url }}.small.jpg" alt="{{ page.title }}"/>
+                        </a>
+                        {% endfor %}
+                    </div>
+
+                    {{ content }}
+
+                    <a
+                            class='btn btn-primary btn-sm google-map-btn'
+                            href='https://www.google.com/maps/search/?api=1&query={{ page.lat }},{{ page.lng }}'
+                            role='button'
+                            target='_blank'
+                    >
+                        Open in Google Maps
+                    </a>
+                    <div class="my-4">
+                        <div class="map" id="place-map" class="my-4"></div>
+                    </div>
+
+
+                </article>
+                <div class="d-flex justify-content-between">
+                    {% if page.previous.url %}
+                    <a class="btn-link" href="{{page.previous.url | relative_url }}">&laquo; {{page.previous.title }}</a>
+                    {% endif %}
+                    {% if page.next.url %}
+                    <a class="btn-link" href="{{page.next.url| relative_url }}">{{page.next.title}} &raquo;</a>
+                    {% endif %}
+                </div>
+
+                <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+            </div>
+        </div>
     </div>
+</main>
 
-    <div class="post-content e-content" itemprop="articleBody">
-      <div class="google-maps-link">
-        <a href="https://www.google.com/maps/search/?api=1&query={{ page.lat }},{{ page.lng }}" target="_blank">
-          See on Google Maps
-        </a>
-      </div>
-      {{ content }}
-    </div>
+{%- include footer.html -%}
+{%- include scripts.html -%}
 
-    <div class="page-naviation">
-      {% if page.previous.url %}
-      <a class="prev" href="{{page.previous.url | relative_url }}">&laquo; {{page.previous.title }}</a>
-      {% else %}
-      <a class="prev"></a>
-      {% endif %}
-      {% if page.next.url %}
-      <a class="next" href="{{page.next.url| relative_url }}">{{page.next.title}} &raquo;</a>
-      {% endif %}
-    </div>
+<script>
 
-    {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-    {%- endif -%}
+  lat = {{ page.lat }};
+  lng = {{ page.lng }};
+  zoom = 17;
 
-    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-  </article>
+  var map = L.map('place-map').setView([lat, lng], zoom);
+
+  L.control.locate({
+    returnToPrevBounds: true
+  }).addTo(map);
+
+  L.tileLayer('https://a.tile.openstreetmap.org/{z}/{x}/{y}.png ', {
+    maxZoom: 18,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  var marker = L.marker([{{ page.lat}}, {{ page.lng }}]).addTo(map);
+  marker.bindPopup('{{ page.title | escape }}', {'closeButton': false}).openPopup();
+</script>
+
+<script type="text/javascript">
+lightGallery(document.getElementById("lightgallery"), {
+  thumbnail: true,
+  showThumbByDefault: false
+});
+
+</script>
+</body>
+
+</html>
