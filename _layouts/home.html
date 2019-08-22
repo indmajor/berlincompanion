@@ -77,7 +77,13 @@
   });
 
   {% for post in site.posts %}
-  var marker = L.marker([{{ post.lat}}, {{ post.lng }}]).addTo(map);
+  var marker = L.marker(
+    [{{ post.lat}}, {{ post.lng }}],
+    {
+      title: "{{post.title}}",
+      alt: "{{post.title}}"
+    }
+  ).addTo(map);
   marker
   .on('click', function(e) {
     $('#{{ post.id | replace: '/', '' }}').modal('show')
