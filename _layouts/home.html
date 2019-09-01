@@ -11,6 +11,38 @@
 
   <div class="map" id="berlin-map"></div>
 
+  <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="infoModalLabel">About Berlin Companion</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            The best way to explore the city is to get curious about every building, street and monument; to turn away from the well-known landmarks and to start noticing hidden, forgotten, unadvertised traces of history around us.
+            <em>Berlin Companion</em> helps you do just that.
+          </p>
+          <p>
+            If you are interested in architecture, history and politics of this city, <em>Berlin Companion</em> will become your best friend on your visit to Berlin.
+          </p>
+          <p>
+            <ul>
+              <li>50+ places to explore with photos and descriptions</li>
+              <li>completely free</li>
+              <li>easy to use on your mobile</li>
+            </ul>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- modals -->
   {% for post in site.posts %}
   <div class="modal fade" id="{{ post.id | replace: '/', '' }}" tabindex="-1" role="dialog" aria-labelledby="{{ post.id | replace: '/', '' }}Label" aria-hidden="true">
@@ -65,10 +97,37 @@
     returnToPrevBounds: true
   }).addTo(map);
 
+  // info box control
+  L.Control.Info = L.Control.extend({
+    onAdd: function(map) {
+      var container = L.DomUtil.create('div', 'leaflet-control-locate leaflet-bar leaflet-control');
+      var link = L.DomUtil.create('a', 'leaflet-bar-part leaflet-bar-part-single', container);
+      var icon = L.DomUtil.create('span', 'fa fa-info', link);
+
+      L.DomEvent
+        .on(link, 'click', L.DomEvent.stopPropagation)
+        .on(link, 'click', L.DomEvent.preventDefault)
+        .on(link, 'dblclick', L.DomEvent.stopPropagation);
+
+      L.DomEvent.on(link, 'click', function() {
+        $('#infoModal').modal('show')
+      });
+
+      return container;
+    }
+  });
+
+  L.control.info = function(opts) {
+    return new L.Control.Info(opts);
+  };
+
+  L.control.info({ position: 'topright' }).addTo(map);
+
   L.tileLayer('https://a.tile.openstreetmap.org/{z}/{x}/{y}.png ', {
     maxZoom: 18,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
+
 
   map.on('popupopen', function(e) {
     var px = map.project(e.target._popup._latlng); // find the pixel location on the map where the popup anchor is
