@@ -22,6 +22,9 @@
         </div>
         <div class="modal-body">
           <p>
+            Welcome to your in-depth guide to Berlin's history, architecture, politics and much more!
+          </p>
+          <p>
             The best way to explore the city is to get curious about every building, street and monument; to turn away from the well-known landmarks and to start noticing hidden, forgotten, unadvertised traces of history around us.
             <em>Berlin Companion</em> helps you do just that.
           </p>
@@ -86,6 +89,11 @@
   {%- include scripts.html -%}
 
   <script>
+
+  if (!localStorage.returningVisitor) {
+    $('#infoModal').modal('show');
+    localStorage.returningVisitor = "1";
+  }
 
   var lat = 52.5200;
   var lng = 13.4050;
